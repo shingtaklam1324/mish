@@ -107,11 +107,43 @@ pub fn powf_f64(f: f64, p: f64) -> f64 {
 }
 
 pub fn sqrt_f32(f: f32) -> f32 {
-    powf_f32(f, 0.5)
+    sqrt_f32_(f, 25)
+}
+
+pub fn sqrt_f32_(f: f32, n: usize) -> f32 {
+    let (mut min, mut max) = (0.0, f);
+    let mut r = (min + max) / 2.0;
+    for i in 0..n {
+        if r * r == f {
+            return r;
+        } else if r * r < f {
+            min = r;
+        } else {
+            max = r;
+        }
+        r = (min + max) / 2.0;
+    }
+    r
 }
 
 pub fn sqrt_f64(f: f64) -> f64 {
-    powf_f64(f, 0.5)
+    sqrt_f64_(f, 25)
+}
+
+pub fn sqrt_f64_(f: f64, n: usize) -> f64 {
+    let (mut min, mut max) = (0.0, f);
+    let mut r = (min + max) / 2.0;
+    for i in 0..n {
+        if r * r == f {
+            return r;
+        } else if r * r < f {
+            min = r;
+        } else {
+            max = r;
+        }
+        r = (min + max) / 2.0;
+    }
+    r
 }
 
 use core::{f32::consts::{LN_10 as fLN_10, LN_2 as fLN_2},

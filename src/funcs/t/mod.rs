@@ -18,6 +18,8 @@ pub use self::t::*;
 pub mod h;
 pub use self::h::*;
 
+pub mod hinv;
+pub use self::hinv::*;
 // shifts a to be in [b, b + 2PI]
 pub fn angle_shift_f32(a: f32, b: f32) -> f32 {
     if a < b {
