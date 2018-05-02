@@ -1,0 +1,7 @@
+[package]
+name = "mish"
+version = "0.1.0"
+authors = ["Shing Tak Lam <shingtaklam1324@gmail.com>"]
+
+
+[dependencies]
