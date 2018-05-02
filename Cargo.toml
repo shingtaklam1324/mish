@@ -2,6 +2,11 @@
 name = "mish"
 version = "0.1.0"
 authors = ["Shing Tak Lam <shingtaklam1324@gmail.com>"]
-
+description = "A Pure Rust libm like implementation"
+homepage = "https://github.com/shingtaklam1324/mish"
+repository = "https://github.com/shingtaklam1324/mish"
+license = "MIT"
+categories = ["no-std", "science", "embedded"]
+keywords = ["libm", "no-std", "mathematics"]
 
 [dependencies]
