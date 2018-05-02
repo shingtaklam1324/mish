@@ -6,3 +6,7 @@ pub mod n;
 pub mod o;
 /// Trig, CORDIC
 pub mod t;
+pub use self::m::*;
+pub use self::n::*;
+pub use self::o::*;
+pub use self::t::*;
