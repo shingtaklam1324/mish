@@ -14,6 +14,10 @@ pub use self::inv::*;
 pub mod t;
 pub use self::t::*;
 
+// Hyperbolic functions
+pub mod h;
+pub use self::h::*;
+
 // shifts a to be in [b, b + 2PI]
 pub fn angle_shift_f32(a: f32, b: f32) -> f32 {
     if a < b {

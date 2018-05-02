@@ -28,5 +28,8 @@ pub use super::super::funcs::t::asin_f32 as asin;
 pub use super::super::funcs::t::atan_f32 as atan;
 pub use super::super::funcs::t::cbrt_f32 as cbrt;
 pub use super::super::funcs::t::cos_f32 as cos;
+pub use super::super::funcs::t::cosh_f32 as cosh;
 pub use super::super::funcs::t::sin_f32 as sin;
+pub use super::super::funcs::t::sinh_f32 as sinh;
 pub use super::super::funcs::t::tan_f32 as tan;
+pub use super::super::funcs::t::tanh_f32 as tanh;

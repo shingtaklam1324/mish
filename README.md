@@ -6,8 +6,6 @@ Note that it is completely unoptimised, using `+-*/` and loops only.
 Most of the Trig functions are from a CORDIC implementation, apart from `sin`, `cos` and `tan`,
 which are done using a Taylor series to the term of `x^7`
 
-Hyperbolic trig functions are still missing at the moment.
-
 Documentation is missing, but most of the signatures are the same as `std`, so use those docs instead.
 
 Most functions have been checked to 4 d.p. with a Casio Scientific Calculator, consider increasing
@@ -23,6 +21,7 @@ the amount of iterations and validating before using for applications where accu
         * `consts` contains the loop up tables for `inv`
         * `inv` contains the inverse trig functions
         * `t` contains the trig functions
+        * `h` contains hyperbolic functions (no inverse)
 * `prelude` is where most users should import from
     * `f32` contains all functions for `f32`
     * `f64` contains all functions for `f64`
