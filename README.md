@@ -21,7 +21,8 @@ the amount of iterations and validating before using for applications where accu
         * `consts` contains the loop up tables for `inv`
         * `inv` contains the inverse trig functions
         * `t` contains the trig functions
-        * `h` contains hyperbolic functions (no inverse)
+        * `h` contains hyperbolic functions
+        * `hinv` contains inverse hyperbolic functions
 * `prelude` is where most users should import from
     * `f32` contains all functions for `f32`
     * `f64` contains all functions for `f64`
