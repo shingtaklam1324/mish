@@ -27,7 +27,7 @@ the amount of iterations and validating before using for applications where accu
     * `f32` contains all functions for `f32`
     * `f64` contains all functions for `f64`
 
-**Note**: All functions with iterative methods have a counterpart, not included in `prelude`, with end with `_`.
+**Note**: All functions with iterative methods have a counterpart, not included in `prelude`, that end with `_`.
 These methods have an extra integer (`i32` or `usize`) argument, which specifies the amount of iterations to run for.
 This can be used to specify precision vs speed of execution. The methods included by default are wrappers with a default
 value for the loop iterations.

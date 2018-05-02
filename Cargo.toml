@@ -1,6 +1,6 @@
 [package]
 name = "mish"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Shing Tak Lam <shingtaklam1324@gmail.com>"]
 description = "A Pure Rust libm like implementation"
 homepage = "https://github.com/shingtaklam1324/mish"
