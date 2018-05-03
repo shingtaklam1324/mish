@@ -39,7 +39,7 @@ pub fn exp<T: Flt>(p: T) -> T {
 }
 
 pub fn ln<T: Flt>(p: T) -> T {
-    ln_(p, 15)
+    ln_(p, 300)
 }
 
 pub fn ln_<T: Flt>(p: T, n: i16) -> T {

@@ -1,8 +1,8 @@
 [package]
 name = "mish"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["Shing Tak Lam <shingtaklam1324@gmail.com>"]
-description = "A Pure Rust libm like implementation with almost full coverage of libm"
+description = "A proof of concept Rust libm like implementation with almost full coverage of libm"
 homepage = "https://github.com/shingtaklam1324/mish"
 repository = "https://github.com/shingtaklam1324/mish"
 license = "MIT"
@@ -14,4 +14,3 @@ readme = "README.md"
 
 [dev-dependencies]
 quickcheck = "0.6.2"
-quickcheck_macros = "0.6"

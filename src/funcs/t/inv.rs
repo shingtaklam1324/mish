@@ -1,7 +1,7 @@
 use Flt;
 
 pub fn asin<T: Flt>(t: T) -> T {
-    asin_(t, 25)
+    asin_(t, 30)
 }
 
 pub fn asin_<T: Flt>(t: T, n: u16) -> T {
@@ -24,7 +24,7 @@ pub fn asin_<T: Flt>(t: T, n: u16) -> T {
 }
 
 pub fn acos<T: Flt>(t: T) -> T {
-    acos_(t, 25)
+    acos_(t, 30)
 }
 
 pub fn acos_<T: Flt>(t: T, n: u16) -> T {
@@ -47,7 +47,7 @@ pub fn acos_<T: Flt>(t: T, n: u16) -> T {
 }
 
 pub fn atan<T: Flt>(t: T) -> T {
-    atan_(t, 25)
+    atan_(t, 30)
 }
 
 pub fn atan_<T: Flt>(t: T, n: u16) -> T {
