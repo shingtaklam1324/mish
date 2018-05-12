@@ -16,7 +16,7 @@ intended to be a replacement for libm. For that, look to something like `m`.
 Add this to your `Cargo.toml`
 
 ```toml
-mish = "0.2.0"
+mish = "0.2.1"
 ```
 
 add this to your crate root
