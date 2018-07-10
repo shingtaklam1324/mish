@@ -39,7 +39,13 @@ pub fn exp<T: Flt>(p: T) -> T {
 }
 
 pub fn ln<T: Flt>(p: T) -> T {
-    ln_(p, 300)
+    if p <= T::ZERO {
+        T::NAN
+    } else if p < T::ONE {
+        -ln_(recip(p), 300)
+    } else {
+        ln_(p, 300)
+    }
 }
 
 pub fn ln_<T: Flt>(p: T, n: i16) -> T {
