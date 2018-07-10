@@ -21,7 +21,11 @@ pub fn powi<T: Flt>(f: T, p: i16) -> T {
 }
 
 pub fn expm1<T: Flt>(p: T) -> T {
-    expm1_(p, 15)
+    if p < T::ZERO {
+        recip(expm1_(-p, 15) + T::ONE) - T::ONE
+    } else {
+        expm1_(p, 15)
+    }
 }
 
 pub fn expm1_<T: Flt>(p: T, n: i16) -> T {
@@ -39,7 +43,13 @@ pub fn exp<T: Flt>(p: T) -> T {
 }
 
 pub fn ln<T: Flt>(p: T) -> T {
-    ln_(p, 300)
+    if p <= T::ZERO {
+        T::NAN
+    } else if p < T::ONE {
+        -ln_(recip(p), 300)
+    } else {
+        ln_(p, 300)
+    }
 }
 
 pub fn ln_<T: Flt>(p: T, n: i16) -> T {
@@ -55,7 +65,13 @@ pub fn powf<T: Flt>(f: T, p: T) -> T {
 }
 
 pub fn sqrt<T: Flt>(f: T) -> T {
-    sqrt_(f, 25)
+    if f < T::ZERO {
+        T::NAN
+    }else if f < T::ONE {
+        recip(sqrt_(recip(f), 25))
+    } else {
+        sqrt_(f, 25)
+    }
 }
 
 pub fn sqrt_<T: Flt>(f: T, n: u16) -> T {
