@@ -21,7 +21,11 @@ pub fn powi<T: Flt>(f: T, p: i16) -> T {
 }
 
 pub fn expm1<T: Flt>(p: T) -> T {
-    expm1_(p, 15)
+    if p < T::ZERO {
+        recip(expm1_(-p, 15) + T::ONE) - T::ONE
+    } else {
+        expm1_(p, 15)
+    }
 }
 
 pub fn expm1_<T: Flt>(p: T, n: i16) -> T {
