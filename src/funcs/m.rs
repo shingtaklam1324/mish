@@ -55,7 +55,13 @@ pub fn powf<T: Flt>(f: T, p: T) -> T {
 }
 
 pub fn sqrt<T: Flt>(f: T) -> T {
-    sqrt_(f, 25)
+    if f < T::ZERO {
+        T::NAN
+    }else if f < T::ONE {
+        recip(sqrt_(recip(f), 25))
+    } else {
+        sqrt_(f, 25)
+    }
 }
 
 pub fn sqrt_<T: Flt>(f: T, n: u16) -> T {
